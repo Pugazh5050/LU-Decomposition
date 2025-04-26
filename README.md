@@ -27,12 +27,12 @@ To write a program to find the LU Decomposition of a matrix.
 (1) To find the L and U matrix
 ```
 '''Program to find L and U matrix using LU decomposition.
-Developed by: Senthil Raj G
-RegisterNumber: 212224100054
+Developed by: PUGAZHALENTHI V
+RegisterNumber: 212224100047
 '''
-import numpy as np 
+import numpy as np
 from scipy.linalg import lu
-A=np.array(eval(input()))
+A = np.array(eval(input()))
 P,L,U=lu(A)
 print(L)
 print(U)
@@ -40,24 +40,26 @@ print(U)
 (2) To find the LU Decomposition of a matrix
 ```
 '''Program to solve a matrix using LU decomposition.
-Developed by: Senthil Raj
-RegisterNumber: 212224100054
+Developed by: PUGAZHALENTHI V
+RegisterNumber: 212224100047
 '''
 
 # To print X matrix (solution to the equations)
 import numpy as np
 from scipy.linalg import lu_factor,lu_solve
-A=np.array(eval(input()))
-B=np.array(eval(input()))
-piv,lu=lu_factor(A)
-result=lu_solve((piv,lu),B)
-print(result)
+A = np.array(eval(input()))
+b = np.array(eval(input()))
+lu, piv = lu_factor(A)
+x = lu_solve((lu,piv),b)
+print(x)
 ```
 
 ## Output:
-![alt text](<Screenshot 2025-04-25 214446.png>)
+![image](https://github.com/user-attachments/assets/5cc37c72-e73b-46aa-87bf-cfc6c404c5a6)
 
-![alt text](image.png)
+
+![image](https://github.com/user-attachments/assets/5725a1e4-b2a4-4a8d-9d1e-766328e529d8)
+
 
 
 ## Result:
